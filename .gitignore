@@ -41,3 +41,11 @@ example
 # generated native folders
 /ios
 /android
+
+# Evidencia temporal y exportaciones locales
+.local/
+tmp/
+
+# Archivos de entrega locales y fuentes del generador del reporte
+output/*.zip
+rendu/identidad/fuentes/*.otf

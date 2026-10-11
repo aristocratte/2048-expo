@@ -1,56 +1,45 @@
-# Welcome to your Expo app 👋
+# 2048
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+APLICACIONES MÓVILES · Universidad La Salle México.
 
-## Get started
+Equipo: Aristide CORDONNIER, Mathis GIL y Oscar BUAT.
 
-1. Install dependencies
+Repositorio: [aristocratte/2048-expo](https://github.com/aristocratte/2048-expo).
 
-   ```bash
-   npm install
-   ```
+[Reporte de práctica en PDF](output/pdf/Reporte_2048%20-%20CORDONNIER%20-%20GIL%20-%20BUAT.pdf).
 
-2. Start the app
+Se conserva la interfaz inicial: fondo gris, casillas blancas/grises y botones verdes. El juego se controla deslizando el dedo sobre la cuadrícula.
 
-   ```bash
-   npx expo start
-   ```
-
-In the output, you'll find options to open the app in a
-
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
-
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
-
-## Get a fresh project
-
-When you're ready, run:
+## Ejecutar
 
 ```bash
-npm run reset-project
+npm ci
+npx expo start --go
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+Usa Node.js 22.13 o posterior y Expo Go compatible con SDK 57. Conecta el teléfono al mismo Wi-Fi que la computadora y escanea el QR. Para probar en el navegador, usa `npm run web`.
 
-### Other setup steps
+## Reglas
 
-- To set up ESLint for linting, run `npx expo lint`, or follow our guide on ["Using ESLint and Prettier"](https://docs.expo.dev/guides/using-eslint/)
-- If you'd like to set up unit testing, follow our guide on ["Unit Testing with Jest"](https://docs.expo.dev/develop/unit-testing/)
-- Learn more about the TypeScript setup in this template in our guide on ["Using TypeScript"](https://docs.expo.dev/guides/typescript/)
+El tablero empieza con dos fichas. Dos números iguales se unen una sola vez por movimiento; `2 + 2 = 4` suma 4 puntos. Un movimiento válido añade una ficha 2 o 4. Si nada se mueve, no añade nada. La partida acaba cuando no quedan movimientos o al pulsar **Terminar juego**. **Volver a jugar** reinicia la partida.
 
-## Learn more
+## Código
 
-To learn more about developing your project with Expo, look at the following resources:
+- `src/app/`: presentación, juego, Game Over, créditos y navegación.
+- `src/utils/board.ts`: reglas del tablero y dirección del gesto.
+- `src/components/cell.tsx`: casilla original.
+- `src/styles.tsx`: estilos originales.
+- `GUIDE_DEBUTANT.md`: explicación sencilla en francés.
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+## Verificar
 
-## Join the community
+```bash
+npm test
+npm run typecheck
+npm run lint
+npx expo-doctor
+```
 
-Join our community of developers creating universal apps.
+La verificación web y las capturas están en `rendu/`; el reporte La Salle está en `output/pdf/`. Las pruebas en navegador y los bundles nativos no sustituyen la prueba física con Expo Go ni la demostración en clase, pendientes por parte del equipo.
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+Mecánica inspirada en [2048 de Gabriele Cirulli](https://github.com/gabrielecirulli/2048). El ranking mediante API se describe solo como mejora futura en el reporte.

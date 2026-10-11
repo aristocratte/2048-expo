@@ -1,0 +1,72 @@
+{
+  "date": "2026-10-11",
+  "interface": "Estilos de partida conservados: #eee, #ddd, #fff, #aeff6d y #214421; control por deslizamiento sin flechas ni animación personalizada.",
+  "logic_tests": {
+    "passed": 16,
+    "line_combinations": 625
+  },
+  "typecheck": "passed",
+  "lint": "passed",
+  "expo_doctor": {
+    "passed": 21,
+    "total": 21
+  },
+  "exports": [
+    "ios",
+    "android",
+    "web"
+  ],
+  "web_export_console_errors": [],
+  "web": {
+    "date": "2026-10-11",
+    "environment": "Chromium, Expo Web, viewport móvil; gestos simulados por CDP. No dispositivo físico.",
+    "seed": 2048,
+    "checks": [
+      "Inicio, créditos, navegación y dos fichas iniciales",
+      "Un gesto táctil de 8 px no mueve el tablero",
+      "Gesto táctil left: puntos y aparición correctos",
+      "Gesto táctil up: puntos y aparición correctos",
+      "Gesto táctil right: puntos y aparición correctos",
+      "Gesto táctil down: puntos y aparición correctos",
+      "Fin automático real de la sesión de prueba: 118 deslizamientos, 1008 puntos",
+      "Reinicio completo, salida voluntaria e Inicio",
+      "Cuatro pantallas sin desbordamiento horizontal, tablero y salida visibles: 320 × 568",
+      "Cuatro pantallas sin desbordamiento horizontal, tablero y salida visibles: 390 × 844",
+      "Cuatro pantallas sin desbordamiento horizontal, tablero y salida visibles: 430 × 932",
+      "Cuatro pantallas sin desbordamiento horizontal, tablero y salida visibles: 1024 × 768"
+    ],
+    "moves": 118,
+    "finalScore": 1008,
+    "errors": []
+  },
+  "pdf": {
+    "pages": 8,
+    "sha256": "d08d782a2648eff2219254a63bc932d2e04e9a4b95673bee16978c338d438263"
+  },
+  "pending": [
+    "Dispositivo físico con Expo Go",
+    "Demostración en clase"
+  ],
+  "npm_audit": {
+    "moderate": 11,
+    "high": 18,
+    "critical": 0,
+    "resolved": false,
+    "note": "No usar audit fix --force para bajar a versiones incompatibles con Expo SDK 57."
+  },
+  "repository": {
+    "url": "https://github.com/aristocratte/2048-expo",
+    "branch": "master",
+    "verification": "Comparar el commit remoto con HEAD después de publicar."
+  },
+  "source_files_sha256": {
+    "src/app/_layout.tsx": "5bcb5bc60f04c9265f9a36cc9a9d9e63c60647ed1e8507e8425f7126f9a83d87",
+    "src/app/credits.tsx": "fb362beebdfbbc6bd4eb86ba3ca29efb6b35707151d152a7d89d79eaf85c23c5",
+    "src/app/game.tsx": "852348c282f87a04fb36129d7df100c72e6556aafe59341a428359265e406125",
+    "src/app/gameover.tsx": "8eb18e8faa5bccbf612f104b9cedd01e7051b32fdfa831a1996ccfc24b54f433",
+    "src/app/index.tsx": "a0187dbe2a8182df3407cc91f0c5a2393d7f9160ea46910efb4948e93f6f31df",
+    "src/components/cell.tsx": "073286d32c709ec347e4d32d0f39a78d332bdfd49de5e88e23f9cd4db05718cf",
+    "src/styles.tsx": "92a10026317df7f612b79623b6193e4d2fa44bd7e6e761a59ff2d01b7e429bd1",
+    "src/utils/board.ts": "1c75f2e2a11c342844c11ca4641bdd66603cbe77dc54b9fe742869a91be787df"
+  }
+}
