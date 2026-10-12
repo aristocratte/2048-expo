@@ -41,7 +41,7 @@
   },
   "pdf": {
     "pages": 8,
-    "sha256": "d08d782a2648eff2219254a63bc932d2e04e9a4b95673bee16978c338d438263"
+    "sha256": "138fca76f13f87162788741b3fb8192ba7badd5c7d4b2a9aa90dad187ea7badb"
   },
   "pending": [
     "Dispositivo físico con Expo Go",
@@ -68,5 +68,19 @@
     "src/components/cell.tsx": "073286d32c709ec347e4d32d0f39a78d332bdfd49de5e88e23f9cd4db05718cf",
     "src/styles.tsx": "92a10026317df7f612b79623b6193e4d2fa44bd7e6e761a59ff2d01b7e429bd1",
     "src/utils/board.ts": "1c75f2e2a11c342844c11ca4641bdd66603cbe77dc54b9fe742869a91be787df"
+  },
+  "documentation": {
+    "language": "French",
+    "step_by_step": [
+      "board and state",
+      "PanResponder",
+      "getSwipeDirection",
+      "moveLineLeft",
+      "moveBoard",
+      "score and random tile",
+      "render and game over"
+    ],
+    "style": "human-writing",
+    "punctuation": "Guide, README y reporte sin punto y coma ni raya larga."
   }
 }

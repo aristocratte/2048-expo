@@ -21,7 +21,7 @@ Usa Node.js 22.13 o posterior y Expo Go compatible con SDK 57. Conecta el teléf
 
 ## Reglas
 
-El tablero empieza con dos fichas. Dos números iguales se unen una sola vez por movimiento; `2 + 2 = 4` suma 4 puntos. Un movimiento válido añade una ficha 2 o 4. Si nada se mueve, no añade nada. La partida acaba cuando no quedan movimientos o al pulsar **Terminar juego**. **Volver a jugar** reinicia la partida.
+El tablero empieza con dos fichas. Dos números iguales se unen una sola vez por movimiento. Por ejemplo, `2 + 2 = 4` suma 4 puntos. Un movimiento válido añade una ficha 2 o 4. Si nada se mueve, no añade nada. La partida acaba cuando no quedan movimientos o al pulsar **Terminar juego**. **Volver a jugar** reinicia la partida.
 
 ## Código
 
@@ -40,6 +40,6 @@ npm run lint
 npx expo-doctor
 ```
 
-La verificación web y las capturas están en `rendu/`; el reporte La Salle está en `output/pdf/`. Las pruebas en navegador y los bundles nativos no sustituyen la prueba física con Expo Go ni la demostración en clase, pendientes por parte del equipo.
+La verificación web y las capturas están en `rendu/`. El reporte La Salle está en `output/pdf/`. Las pruebas en navegador y los bundles nativos no sustituyen la prueba física con Expo Go ni la demostración en clase, pendientes por parte del equipo.
 
 Mecánica inspirada en [2048 de Gabriele Cirulli](https://github.com/gabrielecirulli/2048). El ranking mediante API se describe solo como mejora futura en el reporte.
