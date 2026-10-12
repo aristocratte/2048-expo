@@ -20,7 +20,6 @@ export default function GameScreen() {
     router.replace({ pathname: "/gameover", params: { score, reason } });
   };
 
-  // Comprobar el tablero nuevo después de cambiar el estado.
   useEffect(() => {
     if (isGameOver(game.board)) {
       router.replace({ pathname: "/gameover", params: { score: game.score, reason: "blocked" } });
@@ -30,13 +29,11 @@ export default function GameScreen() {
   const play = (direction: Direction) => {
     setGame(current => {
       const result = moveBoard(current.board, direction);
-      // Si el tablero no cambia, no añadir fichas ni puntos.
       if (!result.changed) return current;
       return { board: addRandomTile(result.board), score: current.score + result.points };
     });
   };
 
-  // Al soltar el dedo, elegir una sola dirección.
   const panResponder = PanResponder.create({
     onStartShouldSetPanResponder: () => true,
     onMoveShouldSetPanResponder: () => true,

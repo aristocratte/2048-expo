@@ -1,7 +1,6 @@
 export type Direction = "left" | "right" | "up" | "down";
 export const BOARD_SIZE = 4;
 
-// El tablero es una matriz: 0 significa que la casilla está vacía.
 export function addRandomTile(currentBoard: number[][]): number[][] {
   const newBoard = currentBoard.map(row => [...row]);
   const emptyCells: { row: number; col: number }[] = [];
@@ -24,8 +23,6 @@ export function createBoard(): number[][] {
   return addRandomTile(addRandomTile(emptyBoard));
 }
 
-// Quitar ceros, fusionar parejas una sola vez y completar con ceros.
-// Ejemplo: [2, 2, 2, 2] -> [4, 4, 0, 0], con 8 puntos.
 export function moveLineLeft(line: number[]) {
   const numbers = line.filter(value => value !== 0);
   const result: number[] = [];
@@ -36,7 +33,7 @@ export function moveLineLeft(line: number[]) {
       const merged = numbers[i] * 2;
       result.push(merged);
       points += merged;
-      i++; // Saltar la segunda ficha: no puede fusionarse otra vez.
+      i++;
     } else {
       result.push(numbers[i]);
     }
@@ -46,7 +43,6 @@ export function moveLineLeft(line: number[]) {
   return { line: result, points };
 }
 
-// Las cuatro direcciones reutilizan la misma lógica de una línea.
 export function moveBoard(currentBoard: number[][], direction: Direction) {
   const newBoard = currentBoard.map(row => [...row]);
   const horizontal = direction === "left" || direction === "right";

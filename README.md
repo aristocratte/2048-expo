@@ -4,11 +4,7 @@ APLICACIONES MÓVILES · Universidad La Salle México.
 
 Equipo: Aristide CORDONNIER, Mathis GIL y Oscar BUAT.
 
-Repositorio: [aristocratte/2048-expo](https://github.com/aristocratte/2048-expo).
-
-[Reporte de práctica en PDF](output/pdf/Reporte_2048%20-%20CORDONNIER%20-%20GIL%20-%20BUAT.pdf).
-
-Se conserva la interfaz inicial: fondo gris, casillas blancas/grises y botones verdes. El juego se controla deslizando el dedo sobre la cuadrícula.
+Juego 2048 con React Native, Expo y Expo Router. Se controla deslizando el dedo sobre la cuadrícula.
 
 ## Ejecutar
 
@@ -27,9 +23,8 @@ El tablero empieza con dos fichas. Dos números iguales se unen una sola vez por
 
 - `src/app/`: presentación, juego, Game Over, créditos y navegación.
 - `src/utils/board.ts`: reglas del tablero y dirección del gesto.
-- `src/components/cell.tsx`: casilla original.
-- `src/styles.tsx`: estilos originales.
-- `GUIDE_DEBUTANT.md`: explicación sencilla en francés.
+- `src/components/cell.tsx`: casilla.
+- `src/styles.tsx`: estilos compartidos.
 
 ## Verificar
 
@@ -40,6 +35,4 @@ npm run lint
 npx expo-doctor
 ```
 
-La verificación web y las capturas están en `rendu/`. El reporte La Salle está en `output/pdf/`. Las pruebas en navegador y los bundles nativos no sustituyen la prueba física con Expo Go ni la demostración en clase, pendientes por parte del equipo.
-
-Mecánica inspirada en [2048 de Gabriele Cirulli](https://github.com/gabrielecirulli/2048). El ranking mediante API se describe solo como mejora futura en el reporte.
+Mecánica inspirada en [2048 de Gabriele Cirulli](https://github.com/gabrielecirulli/2048).
